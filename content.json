@@ -1,0 +1,78 @@
+{
+  "hero_section": {
+    "tagline": "SMART AUTOMATION POWERED BY AI APPS",
+    "title_part1": "Transforming Workflows into",
+    "title_part2": "Seamless Intelligent Experiences",
+    "description": "Hi! I'm Yana Shurpik, a full-stack Developer from Poland",
+    "button_text": "See my work"
+  },
+  "about_section": {
+    "flexible_communication": "I'm very flexible with time zone communications",
+    "client_collaboration": "I prioritize client collaboration, fostering open communication",
+    "js_animation_library": "Currently building an AI Chat Bot"
+  },
+  "projects_section": {
+    "title": "A small selection of recent projects",
+    "project1": {
+      "title": "Amazon Competitors Reporting",
+      "description": "This app conducts deep competitor research and uses AI to identify key differentiators, offering actionable insights for improvement. It also analyzes media assets and generates high-quality, AI-crafted product visuals that can serve as creative references or ready-to-use marketing materials.",
+      "live_site_text": "Check Live Site"
+    },
+    "project2": {
+      "title": "Intelligent Samples - MrSampler",
+      "description": "This desktop app uses AI to analyze audio files and automatically tag them by genre, mood, instruments, and energy level. It helps producers and sound designers organize and discover their sounds instantly, turning chaotic sample folders into a smart, searchable audio library.",
+      "live_site_text": "Check Live Site"
+    },
+    "project3": {
+      "title": "Portfolio Website",
+      "description": "This portfolio website highlights key business strengths while seamlessly blending AI-generated content with modern design. It organizes visual styles and animations to create an engaging, intelligent showcase of creativity and technology.",
+      "live_site_text": "Check Live Site"
+    },
+    "project4": {
+      "title": "API Key Management System",
+      "description": "A modern API key management system built with Next.js and Supabase, featuring secure key generation, usage tracking, and role-based access control.",
+      "live_site_text": "Check Live Site"
+    }
+  },
+  "testimonials_section": {
+    "title": "Kind words from satisfied clients",
+    "testimonial1": {
+      "text": "Collaborating with John was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. John's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, John is the ideal partner.",
+      "author": "Michael Johnson",
+      "role": "Director of AlphaDev Technologies"
+    }
+  },
+  "experience_section": {
+    "title": "My work experience",
+    "job1": {
+      "title": "Frontend Engineer Intern",
+      "description": "Assisted in the development of a web-based platform using React.js, enhancing interactivity."
+    },
+    "job2": {
+      "title": "Mobile App Dev - JSM Tech",
+      "description": "Designed and developed mobile app for both iOS & Android platforms using React Native."
+    },
+    "job3": {
+      "title": "Freelance App Dev Project",
+      "description": "Led the dev of a mobile app for a client, from initial concept to deployment on app stores."
+    },
+    "job4": {
+      "title": "Lead Frontend Developer",
+      "description": "Developed and maintained user-facing features using modern frontend technologies."
+    }
+  },
+  "approach_section": {
+    "title": "My approach",
+    "phase1_title": "Phase 1",
+    "phase2_title": "Development & Progress Update",
+    "phase2_description": "Once we agree on the plan, I use my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way.",
+    "phase3_title": "Phase 3"
+  },
+  "call_to_action_section": {
+    "title": "Ready to take your digital presence to the next level?",
+    "button_text": "Contact Me"
+  },
+  "footer": {
+    "copyright": "Copyright ©2024 John Doe"
+  }
+}

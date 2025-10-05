@@ -1,0 +1,179 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #0F0F1A;
+    color: #ffffff;
+}
+
+header {
+    background-color: #1a1a2e;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400; /* Medium thin */
+    font-size: 16px;
+}
+
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0; /* Remove padding for fullscreen video effect */
+    position: relative;
+    background-image: none;
+    overflow: hidden;
+    max-width: none; /* Override section max-width */
+    margin: 0; /* Override section margin */
+}
+
+#hero-video-background {
+    position: absolute; /* Revert to absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: cover;
+    transition: none; /* Remove transition */
+}
+
+.hero-overlay {
+    position: absolute; /* Revert to absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Hero tagline font and color override */
+#hero-tagline {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #E4ECFF;
+  font-size: 16px;
+  letter-spacing: 0.25em; /* 25% of the font size */
+}
+
+/* Hero title font and accent */
+#hero-title {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#hero-title .hero-title-accent {
+  color: #CBACF9;
+}
+
+#hero-description {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 24px;
+}
+
+/* Hero CTA uses image background */
+#hero-button {
+  width: 206px; /* adjust if your PNG differs */
+  height: 66px;
+  background: url('images/see-my-work.png') no-repeat center center / contain;
+  border: none;
+  padding: 0;
+  color: transparent; /* keep text for a11y but hide visually */
+  font-size: 0; /* hide text rendering */
+  line-height: 0;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 180ms ease;
+  transform-origin: center center;
+}
+#hero-button:focus-visible {
+  outline: 2px solid #CBACF9;
+  outline-offset: 2px;
+}
+/* Hover/active scale animation */
+#hero-button:hover {
+  transform: scale(1.04);
+}
+#hero-button:active {
+  transform: scale(0.98);
+}
+
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+}
+
+.card {
+    background-color: #1a1a2e;
+    padding: 1.5rem;
+    border-radius: 10px;
+    /* Remove margin-bottom as grid gap will handle spacing */
+}
+
+/* Toast notification styles */
+.toast {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-120%);
+  background: rgba(20, 20, 20, 0.95);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 9999;
+  transition: transform 200ms ease, opacity 200ms ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+.toast.hide {
+  transform: translateX(-50%) translateY(-120%);
+  opacity: 0;
+}
+
