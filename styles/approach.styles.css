@@ -1,0 +1,117 @@
+/* Approach Section */
+#approach {
+    padding: 100px 0;
+}
+
+#approach h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #E4ECFF;
+    margin-bottom: 3rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+#approach h2 span {
+    color: #CBACF9;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.approach-card-container {
+    perspective: 1000px;
+    position: relative;
+    height: 400px; /* Or adjust as needed */
+}
+
+.approach-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.approach-card-container.is-flipped .approach-card {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 520px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 23px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+.card-front {
+    background-color: #1A1A2E; /* Restore card background */
+}
+
+.card-front .phase-button {
+    background-color: rgba(26, 26, 46, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: 18px;
+}
+
+.card-front h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    color: #CBACF9;
+    margin: 0;
+}
+
+.card-back {
+    background-color: #1A1A2E;
+    transform: rotateY(180deg);
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-back h4 {
+    background-color: #2a2a4e;
+    color: #A9A9D0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card-back h3 {
+    font-size: 1.8rem;
+    color: #E4ECFF;
+    margin: 0 0 1rem 0;
+}
+
+.card-back p {
+    color: #A9A9D0;
+    line-height: 1.6;
+}
+
+.corner-cross {
+    position: absolute;
+    width: 46px; /* Adjust size as needed */
+    height: 46px;
+    opacity: 0.5;
+}
+
+.top-left { top: -19px; left: -18px; }
+.top-right { top: -19px; right: -18px; }
+.bottom-left { bottom: -139px; left: -18px; }
+.bottom-right { bottom: -139px; right: -18px; }

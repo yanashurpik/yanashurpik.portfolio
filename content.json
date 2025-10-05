@@ -55,28 +55,42 @@
   "experience_section": {
     "title": "My work experience",
     "job1": {
-      "title": "Frontend Engineer Intern",
-      "description": "Assisted in the development of a web-based platform using React.js, enhancing interactivity."
+      "title": "QA Automation Engineer Intern - Andersen",
+      "description": "Automated quality assurance processes for a CRM web platform."
     },
     "job2": {
-      "title": "Mobile App Dev - JSM Tech",
-      "description": "Designed and developed mobile app for both iOS & Android platforms using React Native."
+      "title": "QA Automation Engineer Mid - Clearcode",
+      "description": "Assisted in the development of an ad-tech platforms, enhancing quality and user experience."
     },
     "job3": {
-      "title": "Freelance App Dev Project",
-      "description": "Led the dev of a mobile app for a client, from initial concept to deployment on app stores."
+      "title": "Team Lead QA Automation Engineer - Avenga",
+      "description": "Led the e2e automation of a ad-tech platform, from initial concept to deployment."
     },
     "job4": {
-      "title": "Lead Frontend Developer",
-      "description": "Developed and maintained user-facing features using modern frontend technologies."
+      "title": "Freelance Web Developer",
+      "description": "AI consulting, developing and deploying websites and apps for e-commerce, ad-tech and finance."
     }
   },
   "approach_section": {
     "title": "My approach",
-    "phase1_title": "Phase 1",
-    "phase2_title": "Development & Progress Update",
-    "phase2_description": "Once we agree on the plan, I use my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way.",
-    "phase3_title": "Phase 3"
+    "phase1": {
+      "front_title": "Phase 1",
+      "back_small_title": "Phase 1",
+      "back_main_title": "Discovery & Planning",
+      "back_description": "We start by discussing your vision and goals. I'll create a detailed project plan and timeline to ensure we're aligned every step of the way."
+    },
+    "phase2": {
+      "front_title": "Phase 2",
+      "back_small_title": "Phase 2",
+      "back_main_title": "Development & Progress Update",
+      "back_description": "Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way."
+    },
+    "phase3": {
+      "front_title": "Phase 3",
+      "back_small_title": "Phase 3",
+      "back_main_title": "Deployment & Review",
+      "back_description": "After thorough testing, I'll deploy the project. We'll review the final product together to ensure it meets your expectations and discuss any final tweaks."
+    }
   },
   "call_to_action_section": {
     "title": "Ready to take your digital presence to the next level?",

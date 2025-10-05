@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="styles/about.styles.css">
     <link rel="stylesheet" href="styles/projects.styles.css">
     <link rel="stylesheet" href="styles/testimonials.styles.css">
+    <link rel="stylesheet" href="styles/experience.styles.css">
+    <link rel="stylesheet" href="styles/approach.styles.css">
 </head>
 <body>
     <header>
@@ -202,20 +204,40 @@
             <h2 id="experience-title"></h2>
             <div class="experience-grid">
                 <div class="experience-card animate-on-scroll parallax-card">
-                    <h3 id="job1-title"></h3>
-                    <p id="job1-description"></p>
+                    <div class="card-content-wrapper">
+                        <img src="styles/images/1-experience.png" alt="Frontend Engineer Intern" class="experience-icon">
+                        <div class="experience-text">
+                            <h3 id="job1-title"></h3>
+                            <p id="job1-description"></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="experience-card animate-on-scroll parallax-card">
-                    <h3 id="job2-title"></h3>
-                    <p id="job2-description"></p>
+                    <div class="card-content-wrapper">
+                        <img src="styles/images/2-experrience.png" alt="Mobile App Dev" class="experience-icon">
+                        <div class="experience-text">
+                            <h3 id="job2-title"></h3>
+                            <p id="job2-description"></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="experience-card animate-on-scroll parallax-card">
-                    <h3 id="job3-title"></h3>
-                    <p id="job3-description"></p>
+                    <div class="card-content-wrapper">
+                        <img src="styles/images/3-experience.png" alt="Freelance Project" class="experience-icon">
+                        <div class="experience-text">
+                            <h3 id="job3-title"></h3>
+                            <p id="job3-description"></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="experience-card animate-on-scroll parallax-card">
-                    <h3 id="job4-title"></h3>
-                    <p id="job4-description"></p>
+                    <div class="card-content-wrapper">
+                        <img src="styles/images/4-experience.png" alt="Lead Frontend Developer" class="experience-icon">
+                        <div class="experience-text">
+                            <h3 id="job4-title"></h3>
+                            <p id="job4-description"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -223,15 +245,62 @@
         <section id="approach" class="animate-on-scroll">
             <h2 id="approach-title"></h2>
             <div class="approach-grid">
-                <div class="approach-card animate-on-scroll parallax-card">
-                    <h3 id="phase1-title"></h3>
+                <!-- Card 1 -->
+                <div class="approach-card-container">
+                    <div class="approach-card">
+                        <div class="card-face card-front">
+                            <div class="phase-button">
+                                <h3 id="phase1-front-title"></h3>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4 id="phase1-back-small-title"></h4>
+                            <h3 id="phase1-back-main-title"></h3>
+                            <p id="phase1-back-description"></p>
+                        </div>
+                    </div>
+                    <img src="styles/images/cross.png" alt="" class="corner-cross top-left">
+                    <img src="styles/images/cross.png" alt="" class="corner-cross top-right">
+                    <img src="styles/images/cross.png" alt="" class="corner-cross bottom-left">
+                    <img src="styles/images/cross.png" alt="" class="corner-cross bottom-right">
                 </div>
-                <div class="approach-card animate-on-scroll parallax-card">
-                    <h3 id="phase2-title"></h3>
-                    <p id="phase2-description"></p>
+                <!-- Card 2 -->
+                <div class="approach-card-container">
+                    <div class="approach-card">
+                        <div class="card-face card-front">
+                            <div class="phase-button">
+                                <h3 id="phase2-front-title"></h3>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4 id="phase2-back-small-title"></h4>
+                            <h3 id="phase2-back-main-title"></h3>
+                            <p id="phase2-back-description"></p>
+                        </div>
+                    </div>
+                    <img src="styles/images/cross.png" alt="" class="corner-cross top-left">
+                    <img src="styles/images/cross.png" alt="" class="corner-cross top-right">
+                    <img src="styles/images/cross.png" alt="" class="corner-cross bottom-left">
+                    <img src="styles/images/cross.png" alt="" class="corner-cross bottom-right">
                 </div>
-                <div class="approach-card animate-on-scroll parallax-card">
-                    <h3 id="phase3-title"></h3>
+                <!-- Card 3 -->
+                <div class="approach-card-container">
+                    <div class="approach-card">
+                        <div class="card-face card-front">
+                            <div class="phase-button">
+                                <h3 id="phase3-front-title"></h3>
+                            </div>
+                        </div>
+                        <div class="card-face card-back">
+                            <h4 id="phase3-back-small-title"></h4>
+                            <h3 id="phase3-back-main-title"></h3>
+                            <p id="phase3-back-description"></p>
+                        </div>
+                    </div>
+                    <img src="styles/images/cross.png" alt="" class="corner-cross top-left">
+                    <img src="styles/images/cross.png" alt="" class="corner-cross top-right">
+                    <img src="styles/images/cross.png" alt="" class="corner-cross bottom-left">
+                    <img src="styles/images/cross.png" alt="" class="corner-cross bottom-right">
                 </div>
             </div>
         </section>
@@ -282,7 +351,7 @@
                 document.getElementById('testimonial3-author').innerText = data.testimonials_section.testimonial3.author;
                 document.getElementById('testimonial3-role').innerText = data.testimonials_section.testimonial3.role;
 
-                document.getElementById('experience-title').innerText = data.experience_section.title;
+                document.getElementById('experience-title').innerHTML = data.experience_section.title.replace('work experience', '<span>work experience</span>');
                 document.getElementById('job1-title').innerText = data.experience_section.job1.title;
                 document.getElementById('job1-description').innerText = data.experience_section.job1.description;
                 document.getElementById('job2-title').innerText = data.experience_section.job2.title;
@@ -293,10 +362,18 @@
                 document.getElementById('job4-description').innerText = data.experience_section.job4.description;
 
                 document.getElementById('approach-title').innerText = data.approach_section.title;
-                document.getElementById('phase1-title').innerText = data.approach_section.phase1_title;
-                document.getElementById('phase2-title').innerText = data.approach_section.phase2_title;
-                document.getElementById('phase2-description').innerText = data.approach_section.phase2_description;
-                document.getElementById('phase3-title').innerText = data.approach_section.phase3_title;
+                document.getElementById('phase1-front-title').innerText = data.approach_section.phase1.front_title;
+                document.getElementById('phase1-back-small-title').innerText = data.approach_section.phase1.back_small_title;
+                document.getElementById('phase1-back-main-title').innerText = data.approach_section.phase1.back_main_title;
+                document.getElementById('phase1-back-description').innerText = data.approach_section.phase1.back_description;
+                document.getElementById('phase2-front-title').innerText = data.approach_section.phase2.front_title;
+                document.getElementById('phase2-back-small-title').innerText = data.approach_section.phase2.back_small_title;
+                document.getElementById('phase2-back-main-title').innerText = data.approach_section.phase2.back_main_title;
+                document.getElementById('phase2-back-description').innerText = data.approach_section.phase2.back_description;
+                document.getElementById('phase3-front-title').innerText = data.approach_section.phase3.front_title;
+                document.getElementById('phase3-back-small-title').innerText = data.approach_section.phase3.back_small_title;
+                document.getElementById('phase3-back-main-title').innerText = data.approach_section.phase3.back_main_title;
+                document.getElementById('phase3-back-description').innerText = data.approach_section.phase3.back_description;
 
                 document.getElementById('call-to-action-title').innerText = data.call_to_action_section.title;
                 document.getElementById('call-to-action-button').innerText = data.call_to_action_section.button_text;
@@ -333,6 +410,16 @@
                     container.scrollBy({ left: calculateScrollAmount(), behavior: 'smooth' });
                 });
             }
+        });
+
+        // Approach Card Flipper
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.approach-card-container');
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    card.classList.toggle('is-flipped');
+                });
+            });
         });
 
         // make the copy email button clickable (copy to clipboard)
