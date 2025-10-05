@@ -37,9 +37,19 @@
   "testimonials_section": {
     "title": "Kind words from satisfied clients",
     "testimonial1": {
-      "text": "Collaborating with John was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. John's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, John is the ideal partner.",
-      "author": "Michael Johnson",
-      "role": "Director of AlphaDev Technologies"
+      "text": "Working with Yana was an absolute pleasure. She developed a custom audio player that perfectly fits my workflow - it helps me organize my samples efficiently and saves me a lot of time finding the right sound. Yana came up with many clever concepts and ideas that made the program incredibly easy and intuitive to use. Beyond her strong technical skills, she stands out for her exceptional creativity in coding and her outstanding soft skills - she communicates clearly, understands needs quickly, and always brings fresh, innovative ideas to the table.",
+      "author": "Hoa Nguyen",
+      "role": "Music Producer"
+    },
+    "testimonial2": {
+      "text": "Working with this team was a game-changer. Their expertise and collaborative spirit made the entire process seamless and enjoyable. The final product exceeded all our expectations, and we've seen a significant boost in engagement since launch.",
+      "author": "Kim Cruickshanks",
+      "role": "Founder & CEO of Cooking Gift Set Co"
+    },
+    "testimonial3": {
+      "text": "I was impressed by their attention to detail and commitment to quality. They took our initial concept and transformed it into a robust, scalable solution that has become a cornerstone of our business operations. Highly recommended!",
+      "author": "Aleksandra Mocek",
+      "role": "Project Manager at Avenga"
     }
   },
   "experience_section": {

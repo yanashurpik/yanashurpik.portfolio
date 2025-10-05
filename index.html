@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/hero.style.css">
     <link rel="stylesheet" href="styles/about.styles.css">
     <link rel="stylesheet" href="styles/projects.styles.css">
+    <link rel="stylesheet" href="styles/testimonials.styles.css">
 </head>
 <body>
     <header>
@@ -153,10 +154,47 @@
 
         <section id="testimonials" class="animate-on-scroll">
             <h2 id="testimonials-title"></h2>
-            <div class="testimonial-card animate-on-scroll parallax-card">
-                <p id="testimonial1-text"></p>
-                <p id="testimonial1-author"></p>
-                <p id="testimonial1-role"></p>
+            <div class="testimonials-wrapper">
+                <button class="arrow left-arrow">&lt;</button>
+                <div class="testimonials-container">
+                    <div class="testimonial-card parallax-card">
+                        <div class="card-content-wrapper">
+                            <p id="testimonial1-text"></p>
+                            <div class="author-info">
+                                <img src="styles/images/hoa.jpg" alt="Author 1" class="author-avatar">
+                                <div>
+                                    <p id="testimonial1-author" class="author-name"></p>
+                                    <p id="testimonial1-role" class="author-role"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card parallax-card">
+                        <div class="card-content-wrapper">
+                            <p id="testimonial2-text"></p>
+                            <div class="author-info">
+                                <img src="styles/images/kim.png" alt="Author 2" class="author-avatar">
+                                <div>
+                                    <p id="testimonial2-author" class="author-name"></p>
+                                    <p id="testimonial2-role" class="author-role"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card parallax-card">
+                        <div class="card-content-wrapper">
+                            <p id="testimonial3-text"></p>
+                            <div class="author-info">
+                                <img src="images/author3.png" alt="Author 3" class="author-avatar">
+                                <div>
+                                    <p id="testimonial3-author" class="author-name"></p>
+                                    <p id="testimonial3-role" class="author-role"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="arrow right-arrow">&gt;</button>
             </div>
         </section>
 
@@ -216,10 +254,11 @@
             .then(response => response.json())
             .then(data => {
                 document.getElementById('hero-tagline').innerText = data.hero_section.tagline;
-                document.getElementById('hero-title').innerHTML = `${data.hero_section.title_part1}<br>${data.hero_section.title_part2}`;
+                document.getElementById('hero-title').innerHTML = `${data.hero_section.title_part1} <br><span class="hero-title-accent">${data.hero_section.title_part2}</span>`;
                 document.getElementById('hero-description').innerText = data.hero_section.description;
                 document.getElementById('hero-button').innerText = data.hero_section.button_text;
-                document.getElementById('projects-title').innerText = data.projects_section.title;
+
+                document.getElementById('projects-title').innerHTML = data.projects_section.title.replace('recent projects', '<span>recent projects</span>');
                 document.getElementById('project1-title').innerText = data.projects_section.project1.title;
                 document.getElementById('project1-description').innerText = data.projects_section.project1.description;
 
@@ -232,10 +271,16 @@
                 document.getElementById('project4-title').innerText = data.projects_section.project4.title;
                 document.getElementById('project4-description').innerText = data.projects_section.project4.description;
 
-                document.getElementById('testimonials-title').innerText = data.testimonials_section.title;
+                document.getElementById('testimonials-title').innerHTML = data.testimonials_section.title.replace('satisfied clients', '<span>satisfied clients</span>');
                 document.getElementById('testimonial1-text').innerText = data.testimonials_section.testimonial1.text;
                 document.getElementById('testimonial1-author').innerText = data.testimonials_section.testimonial1.author;
                 document.getElementById('testimonial1-role').innerText = data.testimonials_section.testimonial1.role;
+                document.getElementById('testimonial2-text').innerText = data.testimonials_section.testimonial2.text;
+                document.getElementById('testimonial2-author').innerText = data.testimonials_section.testimonial2.author;
+                document.getElementById('testimonial2-role').innerText = data.testimonials_section.testimonial2.role;
+                document.getElementById('testimonial3-text').innerText = data.testimonials_section.testimonial3.text;
+                document.getElementById('testimonial3-author').innerText = data.testimonials_section.testimonial3.author;
+                document.getElementById('testimonial3-role').innerText = data.testimonials_section.testimonial3.role;
 
                 document.getElementById('experience-title').innerText = data.experience_section.title;
                 document.getElementById('job1-title').innerText = data.experience_section.job1.title;
@@ -258,6 +303,37 @@
 
                 document.getElementById('footer-copyright').innerText = data.footer.copyright;
             });
+
+        // Testimonial Scroller
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.testimonials-container');
+            const leftArrow = document.querySelector('.left-arrow');
+            const rightArrow = document.querySelector('.right-arrow');
+
+            if (container && leftArrow && rightArrow) {
+                const calculateScrollAmount = () => {
+                    const card = container.querySelector('.testimonial-card');
+                    return card ? card.offsetWidth + 32 : 0;
+                };
+
+                // Center the middle card after the page and its resources have fully loaded
+                window.addEventListener('load', () => {
+                    const scrollAmount = calculateScrollAmount();
+                    if (scrollAmount > 0) {
+                        // We scroll by one card width to center the second card
+                        container.scrollLeft = scrollAmount;
+                    }
+                });
+
+                leftArrow.addEventListener('click', () => {
+                    container.scrollBy({ left: -calculateScrollAmount(), behavior: 'smooth' });
+                });
+
+                rightArrow.addEventListener('click', () => {
+                    container.scrollBy({ left: calculateScrollAmount(), behavior: 'smooth' });
+                });
+            }
+        });
 
         // make the copy email button clickable (copy to clipboard)
         (function() {
