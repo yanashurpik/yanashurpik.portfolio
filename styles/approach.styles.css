@@ -28,7 +28,28 @@
 .approach-card-container {
     perspective: 1000px;
     position: relative;
-    height: 400px; /* Or adjust as needed */
+    height: 520px;
+}
+
+.approach-card-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 23px;
+    box-shadow: 0 0 30px rgba(203, 172, 249, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.approach-card-container:hover .approach-card-shadow {
+    opacity: 1;
+}
+
+#approach .parallax-card {
+    transition: transform 0.1s ease-out;
+    will-change: transform;
 }
 
 .approach-card {
@@ -36,7 +57,7 @@
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.6s;
+    transition: transform 0.6s; /* No box-shadow here */
     cursor: pointer;
 }
 
@@ -113,5 +134,5 @@
 
 .top-left { top: -19px; left: -18px; }
 .top-right { top: -19px; right: -18px; }
-.bottom-left { bottom: -139px; left: -18px; }
-.bottom-right { bottom: -139px; right: -18px; }
+.bottom-left { bottom: -20px; left: -18px; }
+.bottom-right { bottom: -20px; right: -18px; }

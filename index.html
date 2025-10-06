@@ -13,6 +13,22 @@
     <link rel="stylesheet" href="styles/testimonials.styles.css">
     <link rel="stylesheet" href="styles/experience.styles.css">
     <link rel="stylesheet" href="styles/approach.styles.css">
+    <link rel="stylesheet" href="styles/contact.styles.css">
+    <link rel="stylesheet" href="styles/cta.styles.css">
+    <style>
+        #call-to-action-button {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        #call-to-action-button:hover {
+            transform: scale(1.05);
+        }
+        #call-to-action-button img {
+            width: 239px;
+            height: 66px;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -246,7 +262,8 @@
             <h2 id="approach-title"></h2>
             <div class="approach-grid">
                 <!-- Card 1 -->
-                <div class="approach-card-container">
+                <div class="approach-card-container animate-on-scroll parallax-card">
+                    <div class="approach-card-shadow"></div>
                     <div class="approach-card">
                         <div class="card-face card-front">
                             <div class="phase-button">
@@ -265,7 +282,8 @@
                     <img src="styles/images/cross.png" alt="" class="corner-cross bottom-right">
                 </div>
                 <!-- Card 2 -->
-                <div class="approach-card-container">
+                <div class="approach-card-container animate-on-scroll parallax-card">
+                    <div class="approach-card-shadow"></div>
                     <div class="approach-card">
                         <div class="card-face card-front">
                             <div class="phase-button">
@@ -284,7 +302,8 @@
                     <img src="styles/images/cross.png" alt="" class="corner-cross bottom-right">
                 </div>
                 <!-- Card 3 -->
-                <div class="approach-card-container">
+                <div class="approach-card-container animate-on-scroll parallax-card">
+                    <div class="approach-card-shadow"></div>
                     <div class="approach-card">
                         <div class="card-face card-front">
                             <div class="phase-button">
@@ -307,7 +326,10 @@
 
         <section id="call-to-action" class="animate-on-scroll">
             <h2 id="call-to-action-title"></h2>
-            <button id="call-to-action-button"></button>
+            <p id="call-to-action-subtitle"></p>
+            <a href="mailto:shurpik.y@gmail.com?subject=Project%20Idea&body=Hi%20Yana%2C%0AI%20would%20like%20to%20learn%20more%20about%20your%20work!" id="call-to-action-button">
+                <img src="styles/images/contact-me-now-button.png" alt="Email Me">
+              </a>
         </section>
     </main>
 
@@ -361,7 +383,7 @@
                 document.getElementById('job4-title').innerText = data.experience_section.job4.title;
                 document.getElementById('job4-description').innerText = data.experience_section.job4.description;
 
-                document.getElementById('approach-title').innerText = data.approach_section.title;
+                document.getElementById('approach-title').innerHTML = data.approach_section.title.replace('approach', '<span>approach</span>');
                 document.getElementById('phase1-front-title').innerText = data.approach_section.phase1.front_title;
                 document.getElementById('phase1-back-small-title').innerText = data.approach_section.phase1.back_small_title;
                 document.getElementById('phase1-back-main-title').innerText = data.approach_section.phase1.back_main_title;
@@ -375,8 +397,8 @@
                 document.getElementById('phase3-back-main-title').innerText = data.approach_section.phase3.back_main_title;
                 document.getElementById('phase3-back-description').innerText = data.approach_section.phase3.back_description;
 
-                document.getElementById('call-to-action-title').innerText = data.call_to_action_section.title;
-                document.getElementById('call-to-action-button').innerText = data.call_to_action_section.button_text;
+                document.getElementById('call-to-action-title').innerHTML = data.call_to_action_section.title.replace('your', '<span>your</span>');
+                document.getElementById('call-to-action-subtitle').innerText = data.call_to_action_section.subtitle;
 
                 document.getElementById('footer-copyright').innerText = data.footer.copyright;
             });

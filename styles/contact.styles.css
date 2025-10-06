@@ -1,0 +1,47 @@
+/* Call to Action Section */
+#call-to-action {
+    padding: 100px 2rem;
+    text-align: center;
+    background-image: url('images/pattern.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 23px;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+#call-to-action h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; /* bold */
+    font-size: 48px;
+    color: #E4ECFF;
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+}
+
+#call-to-action p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* regular */
+    font-size: 16px;
+    color: #A9A9D0;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+#call-to-action-button {
+    background-image: url('images/contact-me-now-button.png');
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 50px;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#call-to-action-button:hover {
+    transform: scale(1.05);
+}
