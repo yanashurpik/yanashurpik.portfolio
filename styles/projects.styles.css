@@ -26,22 +26,24 @@
 }
 
 .project-card {
+    display: grid; /* Use grid to size outer container to inner */
+    /* Visual styles are moved to the inner wrapper */
+}
+
+.project-card .card-content-wrapper {
     background-color: #1A1A2E;
     border-radius: 23px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     text-align: left;
-}
-
-.card-content-wrapper {
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    grid-area: 1 / 1;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .project-card:hover .card-content-wrapper {
     transform: translateY(-10px);
-}
-
-.project-card:hover {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 

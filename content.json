@@ -37,17 +37,17 @@
   "testimonials_section": {
     "title": "Kind words from satisfied clients",
     "testimonial1": {
-      "text": "Working with Yana was an absolute pleasure. She developed a custom audio player that perfectly fits my workflow - it helps me organize my samples efficiently and saves me a lot of time finding the right sound. Yana came up with many clever concepts and ideas that made the program incredibly easy and intuitive to use. Beyond her strong technical skills, she stands out for her exceptional creativity in coding and her outstanding soft skills - she communicates clearly, understands needs quickly, and always brings fresh, innovative ideas to the table.",
+      "text": "Working with Yana was an absolute pleasure. She combined creativity with AI to build a smart audio library that analyzes and tags my samples automatically. The app makes it super easy to find the right sounds fast - it’s a huge time saver in my music production workflow.",
       "author": "Hoa Nguyen",
       "role": "Music Producer"
     },
     "testimonial2": {
-      "text": "Working with this team was a game-changer. Their expertise and collaborative spirit made the entire process seamless and enjoyable. The final product exceeded all our expectations, and we've seen a significant boost in engagement since launch.",
+      "text": "Yana built a competitor analysis platform for my e-commerce business that saved me countless hours of manual research. Every idea I shared was understood and implemented thoughtfully — she’s very agile, responsive, and always one step ahead in improving the product. Great work!",
       "author": "Kim Cruickshanks",
       "role": "Founder & CEO of Cooking Gift Set Co"
     },
     "testimonial3": {
-      "text": "I was impressed by their attention to detail and commitment to quality. They took our initial concept and transformed it into a robust, scalable solution that has become a cornerstone of our business operations. Highly recommended!",
+      "text": "Yana's proactive, detail-oriented, and great to work with — always finding smart ways to make testing smoother. She was a key part of our QA team. She built solid automation with Cypress and TypeScript, quickly improving our test coverage and release speed.",
       "author": "Aleksandra Mocek",
       "role": "Project Manager at Avenga"
     }
