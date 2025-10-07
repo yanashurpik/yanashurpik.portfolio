@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body {
@@ -7,6 +8,7 @@ body {
     font-family: 'Inter', Arial, sans-serif;
     background-color: #0F0F1A;
     color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
