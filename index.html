@@ -16,6 +16,38 @@
     <link rel="stylesheet" href="styles/contact.styles.css">
     <link rel="stylesheet" href="styles/cta.styles.css">
     <style>
+        /* Mobile-specific overrides to bypass cache */
+        @media (max-width: 768px) {
+            /* 1. Hide hero video and set background */
+            #hero-video-background {
+                display: none !important;
+            }
+            #hero {
+                background-color: #0F0F1A !important;
+            }
+
+            /* 2. Make hero fonts smaller */
+            #hero-title {
+                font-size: 36px !important;
+            }
+            #hero-description {
+                font-size: 16px !important;
+            }
+
+            /* 4. Make approach cards smaller */
+            .approach-card-container, .card-face {
+                height: auto !important;
+                min-height: 280px !important;
+            }
+            .card-front h3 {
+                font-size: 24px !important;
+            }
+
+            header {
+                padding: 1rem;
+            }
+        }
+
         #call-to-action-button {
             display: inline-block;
             transition: transform 0.3s ease;

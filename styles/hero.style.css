@@ -178,17 +178,39 @@ section h2 {
 }
 
 @media (max-width: 768px) {
+    #hero {
+        background-color: #0F0F1A; /* Fallback background color */
+    }
+
+    #hero-video-background {
+        display: none; /* Hide video on mobile */
+    }
+
+    #hero-tagline {
+      font-size: 12px;
+    }
+
     #hero-title {
-        font-size: 48px; /* Reduce font size for mobile */
+        font-size: 30px; /* Further reduce font size */
     }
 
     #hero-description {
-        font-size: 18px; /* Reduce font size for mobile */
+        font-size: 16px; /* Further reduce font size */
+    }
+
+    #hero-button {
+      width: 398px; /* adjust if your PNG differs */
+      height: 56px;
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
+        flex-direction: row; /* Keep navigation horizontal */
+        justify-content: center;
+        gap: 1rem; /* Adjust space for mobile */
+    }
+
+    nav ul li {
+        margin: 0; /* Remove margin to rely on gap property */
     }
 }
 

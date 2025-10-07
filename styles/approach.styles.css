@@ -141,4 +141,21 @@
     .approach-grid {
         grid-template-columns: 1fr; /* Stack cards in a single column */
     }
+
+    .approach-card-container, .card-face {
+        height: auto; /* Let content define height */
+        min-height: 250px; /* Set a minimum height */
+    }
+
+    .card-front h3 {
+        font-size: 24px;
+    }
+
+    .card-back {
+        padding: 1.5rem;
+    }
+
+    .card-back h3 {
+        font-size: 1.5rem;
+    }
 }
