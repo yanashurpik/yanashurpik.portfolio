@@ -177,3 +177,18 @@ section h2 {
   opacity: 0;
 }
 
+@media (max-width: 768px) {
+    #hero-title {
+        font-size: 48px; /* Reduce font size for mobile */
+    }
+
+    #hero-description {
+        font-size: 18px; /* Reduce font size for mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+

@@ -136,3 +136,9 @@
 .top-right { top: -19px; right: -18px; }
 .bottom-left { bottom: -20px; left: -18px; }
 .bottom-right { bottom: -20px; right: -18px; }
+
+@media (max-width: 768px) {
+    .approach-grid {
+        grid-template-columns: 1fr; /* Stack cards in a single column */
+    }
+}

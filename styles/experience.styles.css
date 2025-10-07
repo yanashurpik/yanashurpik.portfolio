@@ -73,3 +73,14 @@
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+    .experience-grid {
+        grid-template-columns: 1fr; /* Stack cards in a single column */
+    }
+
+    .experience-card .card-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+}

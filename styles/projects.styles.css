@@ -144,3 +144,9 @@
 .project-link:hover::after {
     transform: translateX(5px);
 }
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack cards in a single column */
+    }
+}

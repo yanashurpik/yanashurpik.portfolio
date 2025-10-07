@@ -111,6 +111,16 @@
     letter-spacing: -0.01em;
 }
 
+@media (max-width: 768px) {
+    .testimonial-card {
+        flex: 0 0 90%; /* Make cards take up more width */
+    }
+
+    .testimonials-wrapper {
+        padding: 0 1rem; /* Add some padding to the sides */
+    }
+}
+
 .author-role {
     font-size: 0.9rem;
     color: #A9A9D0;

@@ -116,3 +116,41 @@
   /* enthusiast nudge */
   #about .tech-enthusiast-card { margin-left: -30px !important; }
 }
+
+@media (max-width: 768px) {
+    #about {
+        padding: 4rem 5px; /* Add horizontal padding here */
+    }
+
+    #about .about-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 0; /* Remove padding from the grid container */
+    }
+
+    /* Reset all desktop-specific positioning */
+    #about .card,
+    #about .collaboration-card,
+    #about .timezones-card,
+    #about .techstack-card,
+    #about .tech-enthusiast-card,
+    #about .code-snippet-card,
+    #about .email-card {
+        grid-column: auto;
+        grid-row: auto;
+        margin: 0 !important;
+        width: 100%;
+        max-width: 400px; /* Constrain width for a cleaner look */
+        padding: 0; /* Remove padding from card containers */
+        background: none; /* Remove card background */
+    }
+
+    /* Ensure images scale correctly within their containers */
+    #about .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
