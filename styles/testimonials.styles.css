@@ -112,12 +112,24 @@
 }
 
 @media (max-width: 768px) {
+    #testimonials {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     .testimonial-card {
         flex: 0 0 90%; /* Make cards take up more width */
     }
 
     .testimonials-wrapper {
         padding: 0 1rem; /* Add some padding to the sides */
+    }
+
+    #testimonials h2 {
+        font-size: 30px;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

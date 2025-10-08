@@ -91,9 +91,17 @@
     border-radius: 18px;
 }
 
+.card-front .front-main-title {
+    font-size: 1.6rem;
+    color: #E4ECFF;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+
 .card-front h3 {
     font-family: 'Inter', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     color: #CBACF9;
     margin: 0;
 }
@@ -138,6 +146,11 @@
 .bottom-right { bottom: -20px; right: -18px; }
 
 @media (max-width: 768px) {
+    #approach {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     .approach-grid {
         grid-template-columns: 1fr; /* Stack cards in a single column */
     }
@@ -148,14 +161,18 @@
     }
 
     .card-front h3 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .card-back {
-        padding: 1.5rem;
+        padding: 1px;
     }
 
     .card-back h3 {
         font-size: 1.5rem;
+    }
+
+    #approach h2 {
+        font-size: 30px;
     }
 }

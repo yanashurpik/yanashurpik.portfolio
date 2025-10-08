@@ -75,18 +75,21 @@
     "title": "My approach",
     "phase1": {
       "front_title": "Phase 1",
+      "front_main_title": "Discovery & Planning",
       "back_small_title": "Phase 1",
       "back_main_title": "Discovery & Planning",
       "back_description": "We start by discussing your vision and goals. I'll create a detailed project plan and timeline to ensure we're aligned every step of the way."
     },
     "phase2": {
       "front_title": "Phase 2",
+      "front_main_title": "Development & Progress Update",
       "back_small_title": "Phase 2",
       "back_main_title": "Development & Progress Update",
       "back_description": "Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way."
     },
     "phase3": {
       "front_title": "Phase 3",
+      "front_main_title": "Deployment & Review",
       "back_small_title": "Phase 3",
       "back_main_title": "Deployment & Review",
       "back_description": "After thorough testing, I'll deploy the project. We'll review the final product together to ensure it meets your expectations and discuss any final tweaks."

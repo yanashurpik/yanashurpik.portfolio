@@ -146,7 +146,19 @@
 }
 
 @media (max-width: 768px) {
+    #projects {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr; /* Stack cards in a single column */
+    }
+
+    #projects h2 {
+        font-size: 30px; /* Reduce font size for mobile */
+        max-width: 300px; /* Force text to wrap */
+        margin-left: auto;
+        margin-right: auto;
     }
 }

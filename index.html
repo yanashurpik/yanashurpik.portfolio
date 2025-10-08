@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe - Portfolio</title>
+    <title>Yana Shurpik - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -301,6 +301,7 @@
                             <div class="phase-button">
                                 <h3 id="phase1-front-title"></h3>
                             </div>
+                            <h3 id="phase1-front-main-title" class="front-main-title"></h3>
                         </div>
                         <div class="card-face card-back">
                             <h4 id="phase1-back-small-title"></h4>
@@ -321,6 +322,7 @@
                             <div class="phase-button">
                                 <h3 id="phase2-front-title"></h3>
                             </div>
+                            <h3 id="phase2-front-main-title" class="front-main-title"></h3>
                         </div>
                         <div class="card-face card-back">
                             <h4 id="phase2-back-small-title"></h4>
@@ -341,6 +343,7 @@
                             <div class="phase-button">
                                 <h3 id="phase3-front-title"></h3>
                             </div>
+                            <h3 id="phase3-front-main-title" class="front-main-title"></h3>
                         </div>
                         <div class="card-face card-back">
                             <h4 id="phase3-back-small-title"></h4>
@@ -417,14 +420,17 @@
 
                 document.getElementById('approach-title').innerHTML = data.approach_section.title.replace('approach', '<span>approach</span>');
                 document.getElementById('phase1-front-title').innerText = data.approach_section.phase1.front_title;
+                document.getElementById('phase1-front-main-title').innerText = data.approach_section.phase1.front_main_title;
                 document.getElementById('phase1-back-small-title').innerText = data.approach_section.phase1.back_small_title;
                 document.getElementById('phase1-back-main-title').innerText = data.approach_section.phase1.back_main_title;
                 document.getElementById('phase1-back-description').innerText = data.approach_section.phase1.back_description;
                 document.getElementById('phase2-front-title').innerText = data.approach_section.phase2.front_title;
+                document.getElementById('phase2-front-main-title').innerText = data.approach_section.phase2.front_main_title;
                 document.getElementById('phase2-back-small-title').innerText = data.approach_section.phase2.back_small_title;
                 document.getElementById('phase2-back-main-title').innerText = data.approach_section.phase2.back_main_title;
                 document.getElementById('phase2-back-description').innerText = data.approach_section.phase2.back_description;
                 document.getElementById('phase3-front-title').innerText = data.approach_section.phase3.front_title;
+                document.getElementById('phase3-front-main-title').innerText = data.approach_section.phase3.front_main_title;
                 document.getElementById('phase3-back-small-title').innerText = data.approach_section.phase3.back_small_title;
                 document.getElementById('phase3-back-main-title').innerText = data.approach_section.phase3.back_main_title;
                 document.getElementById('phase3-back-description').innerText = data.approach_section.phase3.back_description;

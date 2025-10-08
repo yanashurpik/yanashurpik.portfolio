@@ -214,5 +214,11 @@ section h2 {
     nav ul li {
         margin: 0; /* Remove margin to rely on gap property */
     }
+
+    section {
+        margin-top: 100px; /* Add consistent top margin */
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
