@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/approach.styles.css">
     <link rel="stylesheet" href="styles/contact.styles.css">
     <link rel="stylesheet" href="styles/cta.styles.css">
+    <link rel="stylesheet" href="styles/contact-form.styles.css">
     <style>
         /* Mobile-specific overrides to bypass cache */
         @media (max-width: 768px) {
@@ -362,9 +363,17 @@
         <section id="call-to-action" class="animate-on-scroll">
             <h2 id="call-to-action-title"></h2>
             <p id="call-to-action-subtitle"></p>
-            <a href="mailto:shurpik.y@gmail.com?subject=Project%20Idea&body=Hi%20Yana%2C%0AI%20would%20like%20to%20learn%20more%20about%20your%20work!" id="call-to-action-button">
-                <img src="styles/images/contact-me-now-button.png" alt="Email Me">
-              </a>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="31a1cd0c-af59-449d-8762-7add14f69e99">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                </div>
+                <button type="submit" id="submit-button">Submit</button>
+            </form>
         </section>
     </main>
 
@@ -374,6 +383,12 @@
 
     <!-- Toast notification -->
     <div id="toast" aria-live="polite" aria-atomic="true" class="toast">Email is copied!</div>
+
+    <!-- Custom Alert -->
+    <div id="custom-alert" class="custom-alert">
+        <p id="custom-alert-message"></p>
+        <button id="custom-alert-close">&times;</button>
+    </div>
 
     <script>
         fetch('content.json')
@@ -513,5 +528,79 @@
         })();
     </script>
     <script src="scroll_animations.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const submitButton = form.querySelector('#submit-button');
+            const data = Object.fromEntries(new FormData(form));
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
+            try {
+                // --- 1. Define submission promises ---
+                const webhookPromise = fetch('https://proposal-gen.duckdns.org/webhook-test/7662957b-c20a-4536-adb4-dc275adde54f', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const web3FormsPromise = fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form)
+                });
+
+                // --- 2. Wait for both to complete ---
+                const [webhookResult, web3FormsResult] = await Promise.allSettled([webhookPromise, web3FormsPromise]);
+
+                // --- 3. Prioritize Web3Forms for user feedback ---
+                if (web3FormsResult.status === 'fulfilled' && web3FormsResult.value.ok) {
+                    showCustomAlert('Thank you for your message!', 'success');
+                    form.reset();
+                } else {
+                    // Handle Web3Forms error
+                    const errorJson = web3FormsResult.reason || await web3FormsResult.value.json();
+                    const errorMessage = `Sorry, your message could not be sent. Error: ${errorJson.message || 'Unknown'}`;
+                    showCustomAlert(errorMessage, 'error');
+                }
+
+                // Optional: Log webhook error to console for debugging, without alerting the user
+                if (webhookResult.status === 'rejected' || !webhookResult.value.ok) {
+                    console.error('Webhook submission failed:', webhookResult.reason || await webhookResult.value.text());
+                }
+
+            } catch (error) {
+                console.error('An unexpected error occurred:', error);
+                showCustomAlert('An unexpected error occurred. Please check the console for details.', 'error');
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit';
+            }
+        });
+
+        // Custom Alert Logic
+        function showCustomAlert(message, type = 'success') {
+            const customAlert = document.getElementById('custom-alert');
+            const messageElement = document.getElementById('custom-alert-message');
+            const closeButton = document.getElementById('custom-alert-close');
+
+            messageElement.textContent = message;
+            customAlert.className = 'custom-alert show'; // Reset classes and show
+            if (type === 'error') {
+                customAlert.classList.add('error');
+            }
+
+            // Automatically hide after 5 seconds
+            setTimeout(() => {
+                customAlert.classList.remove('show');
+            }, 5000);
+
+            // Hide on close button click
+            closeButton.onclick = () => {
+                customAlert.classList.remove('show');
+            };
+        }
+    </script>
 </body>
 </html>
