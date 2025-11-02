@@ -367,6 +367,7 @@
                 <input type="hidden" name="access_key" value="31a1cd0c-af59-449d-8762-7add14f69e99">
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="text" id="company" name="company" placeholder="Company Name">
                     <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="form-group">
@@ -540,7 +541,7 @@
             
             try {
                 // --- 1. Define submission promises ---
-                const webhookPromise = fetch('https://proposal-gen.duckdns.org/webhook/7662957b-c20a-4536-adb4-dc275adde54f', {
+                const webhookPromise = fetch('https://proposal-gen.duckdns.org/webhook-test/7662957b-c20a-4536-adb4-dc275adde54f', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
