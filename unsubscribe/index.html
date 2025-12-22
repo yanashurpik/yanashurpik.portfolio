@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unsubscribe</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0f0f1a;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #16162a;
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #c7c7d1;
+      margin-bottom: 32px;
+    }
+
+    button {
+      background: #6c5ce7;
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 15px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: #7b6cff;
+    }
+
+    .success {
+      color: #4cd137;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Unsubscribe</h2>
+    <p>Click the button below to stop receiving emails from me.</p>
+
+    <button id="unsubscribeBtn">Unsubscribe</button>
+
+    <p class="success" id="successMsg">You’re unsubscribed ✅</p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get("email");
+    const source = params.get("source");
+
+    document.getElementById("unsubscribeBtn").addEventListener("click", async () => {
+      await fetch("https://proposal-gen.duckdns.org/webhook-test/7a77d449-f158-466a-afdb-cfad07b87472", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          source,
+          timestamp: new Date().toISOString()
+        })
+      });
+
+      document.getElementById("unsubscribeBtn").style.display = "none";
+      document.getElementById("successMsg").style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
