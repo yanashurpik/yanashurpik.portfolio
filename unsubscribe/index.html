@@ -81,7 +81,7 @@
     const source = params.get("source");
 
     document.getElementById("unsubscribeBtn").addEventListener("click", async () => {
-      await fetch("https://proposal-gen.duckdns.org/webhook-test/7a77d449-f158-466a-afdb-cfad07b87472", {
+      await fetch("https://proposal-gen.duckdns.org/webhook/7a77d449-f158-466a-afdb-cfad07b87472", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
